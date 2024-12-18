@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import { PORT } from "./config";
 import sampleRouter from "./routes/sample.router"
 import authRouter from "./routes/auth.router"
+import blogRouter from "./routes/blog.router"
 import cors from "cors"
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json())
 
 app.use("/samples", sampleRouter)
 app.use("/auth", authRouter)
+app.use("/blogs", blogRouter)
 
 
 // middleware error 
