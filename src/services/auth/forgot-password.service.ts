@@ -26,8 +26,8 @@ export const forgotPasswordService = async (body: Pick<User, "email">) => {
 
     transporter.sendMail({
       to: email,
-      subject: "Reset Password",
-      html: `<a href="${link}" targer="_blank" >Reset Password</a>`,
+      subject: "Link Reset Password",
+      html: `<a href="${link}" target="_blank" >Reset Password</a>`,
     });
 
     return { message: "Email sent successfully" };
