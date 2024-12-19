@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { createBlogService } from "../services/blog/create-blog.service";
 import { getBlogService } from "../services/blog/get-blog.service";
 import { getBlogsService } from "../services/blog/get-blogs.service";
+import { deleteBlogService } from "../services/blog/delete-blog.service";
 
 export const getBlogsController = async (
   req: Request,
@@ -56,3 +57,19 @@ export const createBlogController = async (
     next(error);
   }
 };
+
+export const deleteBlogController = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const blogId = Number(req.params.id);
+    const userId = Number(res.locals.user.id);
+    const result = await deleteBlogService(blogId, userId);
+    res.status(204).send(result);
+  } catch (error) {
+    next(error);
+  }
+};
+
