@@ -3,7 +3,7 @@ import { PaginationQueryParams } from "../../types/pagination";
 import prisma from "../../lib/prisma";
 
 interface GetBlogQuery extends PaginationQueryParams {
-    search: string
+  search: string;
 }
 
 export const getBlogsService = async (query: GetBlogQuery) => {
@@ -37,6 +37,9 @@ export const getBlogsService = async (query: GetBlogQuery) => {
       take: take,
       orderBy: {
         [sortBy]: sortOrder,
+      },
+      include: {
+        user: { select: { name: true } },
       },
     });
 
