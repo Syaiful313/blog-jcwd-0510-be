@@ -13,7 +13,6 @@ app.use("/samples", sampleRouter);
 app.use("/auth", authRouter);
 app.use("/blogs", blogRouter);
 
-// middleware error
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.status(400).send(err.message);
 });
