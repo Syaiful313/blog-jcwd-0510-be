@@ -14,7 +14,6 @@ app.use(express_1.default.json());
 app.use("/samples", sample_router_1.default);
 app.use("/auth", auth_router_1.default);
 app.use("/blogs", blog_router_1.default);
-// middleware error
 app.use((err, req, res, next) => {
     res.status(400).send(err.message);
 });

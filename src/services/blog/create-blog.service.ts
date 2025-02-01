@@ -1,6 +1,5 @@
-import { Blog } from "@prisma/client";
-import prisma from "../../lib/prisma";
 import { cloudinaryUpload } from "../../lib/cloudinary";
+import prisma from "../../lib/prisma";
 
 interface CreateBlogBody {
     title: string;

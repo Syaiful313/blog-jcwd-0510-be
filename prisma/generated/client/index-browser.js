@@ -129,37 +129,8 @@ exports.Prisma.UserScalarFieldEnum = {
   name: 'name',
   email: 'email',
   password: 'password',
-  profilPicture: 'profilPicture',
-  referralCode: 'referralCode',
-  totalPoints: 'totalPoints',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
-};
-
-exports.Prisma.ReferralScalarFieldEnum = {
-  id: 'id',
-  inviterId: 'inviterId',
-  inviteeId: 'inviteeId',
-  createdAt: 'createdAt'
-};
-
-exports.Prisma.CouponScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  code: 'code',
-  discountValue: 'discountValue',
-  isUsed: 'isUsed',
-  expiredAt: 'expiredAt',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
-exports.Prisma.PointScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  points: 'points',
-  expiredAt: 'expiredAt',
-  createdAt: 'createdAt'
 };
 
 exports.Prisma.BlogScalarFieldEnum = {
@@ -194,9 +165,6 @@ exports.Prisma.NullsOrder = {
 exports.Prisma.ModelName = {
   Sample: 'Sample',
   User: 'User',
-  Referral: 'Referral',
-  Coupon: 'Coupon',
-  Point: 'Point',
   Blog: 'Blog'
 };
 
